@@ -1,0 +1,57 @@
+<div class="tma_rewarded_wrapper" id="tma_rewarded_wrapper">
+    <div class="tma_rewarded_wrapper_container">
+        <div class="tma_rewarded_wrapper_bonus_wrapper2" id="interaction_skip_button">
+            Click to return to Mini App
+            <img 
+                src={{fingerprint_url}}
+                style="margin-left: 20px; width: 20px; height: 20px;"
+            /> 
+        </div>
+
+        {{if urlType === 'image' || urlType === 'unknown'}}
+            <img src={{ url || logo_url || app_logo}} style="width: 100%" />
+        {{/if}}
+        {{if urlType === 'video'}}
+            <video playsInline src={{url}} autoPlay height="100%" id="videoRef" style="height: calc(100% - 160px)"> </video>
+        {{/if}}
+
+        <div id="playButtonRef" class='play_wrapper' style="display: none">
+            <img src={{play_url}} style="width: 40px; height: 40px" />
+        </div>
+
+
+        <div class="tma_rewarded_wrapper_desc_wrapper">
+            <div class="app_desc_wrapper" onClick={handleClick}>
+                <img class='app_desc_wrapper_logo_container' src={{logo_url || app_logo || url}} />
+                
+                <div class='app_desc_wrapper_content_container'>
+                    <div style="font-size: 17px; color: #acacac;"> 
+                        <div style="display: flex; align-items: center">
+                            <img 
+                                src={{adType_url}} 
+                                style="width: 20px; height: 20px; border-radius: 4px; margin-right: 8px;"
+                            /> 
+                            {{adType_text}}
+                        </div>
+                    </div>
+                    <div class='app_desc_wrapper_app_name' >
+                        {{ app_name || title }}
+                    </div>
+                    <div class='app_desc_wrapper_app_desc'>
+                        {{desc}}
+                    </div>
+                </div>
+                
+                <div class='app_desc_wrapper_icon_wrapper'>
+                    <a 
+                        href={{c_url}} 
+                        target='_blank'
+                        style="text-decoration: none;"
+                    >
+                        <img src={{adAction_url}} style="width: 20px; height: 20px;" /> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

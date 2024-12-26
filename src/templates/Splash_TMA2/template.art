@@ -1,0 +1,41 @@
+<div class="splash2_wrappper" id="splash2_wrappper">
+    <div style="text-align: center; padding: 12px">
+        <button 
+            id="skip_button"
+            style="height: 50px; background: #1989fa; color: #fff; width: 100%; font-size: 14px; border-radius: 16px; border: none"
+        >
+            Skip in <span id="splash_skip_text">{{duration || 10}}</span> seconds
+        </button>
+    </div>
+    <div class='splash2_wrappper_sponsor'> 
+        SPONSOR OF THIS APP
+    </div>
+
+    <div class='splash2_wrappper_desc_container' style="position: relative" >
+        <img class='splash2_wrappper_logo_container' src={{logo_url || app_logo || url}} />
+        <div class='splash2_wrappper_app_name'>{{app_name || title}}</div>
+        <div class='splash2_wrappper_app_desc'>{{desc}}</div>
+        <div style="height: 50px; width: 100%" id="continue_button">
+          <button 
+            style="height: 50px;
+              background: #0072f5;
+              border: none;
+              border-radius: 16px;
+              color: #fff; 
+              margin: 12px 0; 
+              width: calc(100% - 24px);
+              fontSize: 16px; 
+              marginTop: 12px; 
+              borderRadius: 25px;
+              position: absolute;
+              bottom: 0px;"
+          >
+             {{btn_text || "Continue"}}
+          </button>
+        </div>
+    </div>
+
+    <div class='splash2_wrappper_sponsor' style="position: fixed; bottom: 16px"> 
+        Advertising
+    </div>
+</div>

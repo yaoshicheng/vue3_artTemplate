@@ -1,0 +1,114 @@
+.qm_rewarded_wrapper {
+  &_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .play_wrapper{
+  //   position: absolute;
+  //   z-index: 999;
+  //   left: 50%;
+  //   top: 50%;
+  //   width: 50px;
+  //   height: 50px;
+  //   margin-left: -25px;
+  //   margin-top: -25px;
+  //   background: rgba(0,0,0,0.5);
+  //   color: #fff;
+  //   border-radius: 25px;
+  //   font-size: 30px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+  
+  &_bonus_wrapper {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    height: 30px;
+    border-radius: 20px;
+    padding: 0 8px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+  }
+  &_sound_wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    z-index: 99;
+  }
+  
+  &_desc_wrapper {
+    position: fixed;
+    left: 12px;
+    bottom: 100px;
+    color: #fff;
+    background: rgba(0,0,0, 0.3);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  &_desc_wrapper_2 {
+    color: #fff;
+    margin: 0 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_ads_text {
+    width: 30px;
+    background: #666;
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  &_text-container {
+    display: -webkit-box; /* 使用 WebKit 的弹性盒子模型 */
+    -webkit-box-orient: vertical; /* 设置或检索伸缩盒对象的子元素的排列方式 */
+    -webkit-line-clamp: 2; /* 限制在一个块元素显示的文本的行数 */
+    overflow: hidden; /* 隐藏超出的内容 */
+    text-overflow: ellipsis; /* 显示省略号 */
+  }
+
+  &_redo_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  .modal_wrapper {
+    text-align: center;
+    .modal_title {
+      font-size: 20px;
+    }
+    .modal_desc {
+      font-size: 16px;
+      margin: 12px 0 24px 0;
+      color: #666;
+    }
+    .modal_btn_ctl {
+      display: flex;
+      justify-content: space-around;
+    }
+  }  
+}

@@ -1,0 +1,117 @@
+.tma_rewarded_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tma_rewarded_wrapper_container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tma_rewarded_wrapper_bonus_wrapper {
+  position: fixed;
+  top: 4px;
+  border-radius: 8px;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 0 12px;
+  font-size: 14px;
+  width: calc(100% - 24px);
+  z-index: 99;
+}
+.tma_rewarded_wrapper_bonus_wrapper2 {
+  position: fixed;
+  top: 4px;
+  border-radius: 8px;
+  line-height: 40px;
+  text-align: center;
+  height: 40px;
+  background: #606060;
+  color: #fff;
+  margin: 0 12px;
+  font-size: 14px;
+  width: calc(100% - 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+.tma_rewarded_wrapper .play_wrapper {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 30px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tma_rewarded_wrapper_desc_wrapper {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 16px;
+}
+.app_desc_wrapper {
+  color: #fff;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+.app_desc_wrapper_logo_container {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+}
+.app_desc_wrapper_content_container {
+  margin-left: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+}
+.app_desc_wrapper_app_name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #202020;
+}
+.app_desc_wrapper_app_desc {
+  font-size: 12px;
+  color: #a7a7a7;
+  display: -webkit-box;
+  /* 使用-webkit-box进行多行文本处理 */
+  -webkit-line-clamp: 1;
+  /* 设置显示的行数 */
+  -webkit-box-orient: vertical;
+  /* 垂直排列子元素 */
+  overflow: hidden;
+  /* 隐藏超出的内容 */
+  text-overflow: ellipsis;
+  /* 超出部分用省略号表示 */
+}
+.app_desc_wrapper_icon_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 24px;
+  color: #aaa;
+  width: 40px;
+}

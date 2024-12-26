@@ -1,0 +1,82 @@
+<div class="qm_rewarded_wrapper" id="qm_rewarded_wrapper">
+    <div class="qm_rewarded_wrapper_container">
+    <div class='qm_rewarded_wrapper_bonus_wrapper'>
+        <img
+            id="rewarded_icon"
+            src={{ countdown_icon_gray_url || "https://image-cdn.adseye.com/tma/incite_video_coin_gray.png"}}
+            style="width: 16px; height: 16px; margin-right: 4px;"
+        />
+        <span style="margin-right: 30px" id="rewarded_tip">
+            Play & reward in <span id="duration_text">{{duration || 15}}</span> seconds
+        </span>
+        <span style="width: 20px;" id="close_video_button"> X </span>
+    </div>
+    <div class="qm_rewarded_wrapper_sound_wrapper">
+        <img id="volume_button" src={{volume_url}} style="width: 20px; height: 20px" />
+    </div>
+
+    <video
+        id="videoRef"
+        width="100%"
+        playsInline
+        src={{url}}
+    >
+    </video>
+
+    <div class="qm_rewarded_wrapper_desc_wrapper" id="qm_rewarded_wrapper_desc_wrapper">
+        <div style="font-size: 17px; margin-bottom: 6px;"> 
+            {{title}} 
+        </div>
+        <span style="display: flex; font-size: 10px; align-items: center;">
+            <img src={{ad_Logo_url}} style="width: 12px; margin-right: 4px;" />
+            Ad by AdsEye
+        </span>
+    </div>
+
+    <div style="position: fixed; bottom: 16px; background: none; width: 100%; display: flex; justify-content: center" id="continue_button">
+        <div
+            style="height: 40px;line-height: 40px; color: #fff; background: #0072f5; border-radius: 20px; text-align: center; margin: 0 12px; font-size: 16px; width: calc(100% - 24px);"
+        >
+            {{ detail_text || 'Click to play' }}
+        </div>
+    </div>
+
+    <div class="qm_rewarded_wrapper_desc_wrapper_2" id="qm_rewarded_wrapper_desc_wrapper_2" style="display: none">
+        <p style="text-align: center; font-size: 20px; font-weight: 500; margin-bottom: 16px">
+            {{title}}
+        </p>
+        <p class="qm_rewarded_wrapper_text-container">{{desc}}</p>
+        <div class="qm_rewarded_wrapper_ads_text">Ad</div>
+
+        <div style="margin: 36px 0; width: 100%">
+            <button id="continue_button2" style="width: 100%; border-radius: 4px; border: none; height: 32px; background: orange;">
+                Click to play
+            </button>
+        </div>
+
+        <div class="qm_rewarded_wrapper_redo_wrapper" id="redo_button">
+            <img src={{redo_url}} style="width: 20px; height: 20px;" />
+            <span style="margin-left: 12px;">Replay</span>
+        </div>
+    </div>
+</div>
+
+    <div class="rewarded_modal_wrapper" id="rewarded_modal_wrapper" style="display: none; align-items: center; justify-content: center; position: fixed; width: 100%; height: 100%; left: 0; top: 0;">
+        <div id="mask" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0,0,0,0.2)"></div>
+        <div class="modal_wrapper" style="z-index: 999; background: #fff; border-radius: 8px;">
+            <div style="padding: 12px; ">
+                <p class="modal_title">{{ close_dialog_title || "Task Hint" }}</p>
+                <p class="modal_desc">{{ close_dialog_des || "Watch Full Video to Claim Reward"}}</p>
+            </div>
+            
+            <div class="modal_btn_ctl" style="border-top: 1px solid #eee">
+                <button class="modal_btn_exit" id="modal_exit_button" style="width: 50%; border: none;  height: 32px; border-bottom-left-radius: 8px;">
+                    {{ close_dialog_exit_des || "Decline"}}
+                </button>
+                <button class="modal_btn_continue" id="modal_continue_button" style="width: 50%; border: none; background: orange; color: #fff; height: 32px; border-bottom-right-radius: 8px">
+                    {{close_dialog_continue_btn_des || "Continue"}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
